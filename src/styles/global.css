@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: var(--project-fnt-weight-title);
 }
 
-p, li, input, button {
+p, li, input, button, label {
   font-family: 'Open Sans', sans-serif;
   font-weight: var(--project-fnt-weight-text);
 }
@@ -19,4 +19,38 @@ p, li, input, button {
 span, a {
   font-family: 'Open Sans', sans-serif;
   font-weight: var(--project-fnt-weight-title);
+}
+
+button.filled {
+  background-color: var(--project-clr-dark);
+  color: var(--project-clr-light);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  transition: 0.3s var(--project-animation-bezier);
+}
+
+button.filled:is(:hover, :focus) {
+  transform: scale(1.1);
+}
+
+button.circle-filled {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--project-clr-light);
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  padding: 0.6rem;
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  cursor: pointer;
+}
+
+button.circle-filled img {
+  width: 1rem;
+  height: 1rem;
 }

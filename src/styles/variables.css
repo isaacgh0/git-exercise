@@ -17,4 +17,6 @@
 
   --project-fnt-weight-text: 400;
   --project-fnt-weight-title: 600;
+
+  --project-animation-bezier: cubic-bezier(0, .51, .53, 1);
 }

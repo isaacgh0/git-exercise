@@ -1,0 +1,207 @@
+section#third {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--project-clr-light);
+  position: relative;
+}
+
+section#third div.gallery {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+div.gallery div.text,
+div.gallery div.img-container {
+  width: calc(100% / 3);
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+div.gallery div.text {
+  padding: 2rem;
+}
+
+div.gallery div.text img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translate(-2.6rem);
+}
+
+div.gallery div.text img.animate__animated {
+  animation: fade-in-left 0.8s var(--project-animation-bezier) 0.8s forwards;
+}
+
+div.gallery div.text div.titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.4rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translate(-2.6rem);
+}
+
+div.gallery div.text div.titles.animate__animated {
+  animation: fade-in-left 0.8s var(--project-animation-bezier) 0.4s forwards;
+}
+
+
+div.gallery div.text div.titles h2 {
+  font-size: 3rem;
+}
+
+div.gallery div.text button.filled {
+  opacity: 0;
+  transform: translate(-2.6rem);
+}
+
+div.gallery div.text button.filled.animate__animated {
+  animation: fade-in-left 0.8s var(--project-animation-bezier) 0.4s forwards;
+}
+
+div.gallery div.img-container {
+  opacity: 0;
+  transform: translate(0, 2.6rem);
+}
+
+div.gallery div.img-container.animate__animated {
+  animation: fade-in-up 1s var(--project-animation-bezier) forwards;
+}
+div.gallery div.img-container:nth-child(2),
+div.gallery div.img-container:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+div.gallery div.img-container:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+div.gallery div.img-container:nth-child(5),
+div.gallery div.img-container:nth-child(6) {
+  animation-delay: 0.9s;
+}
+
+div.gallery div.img-container > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 0.4rem;
+  position: relative;
+}
+
+div.gallery div.img-container > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+
+div.gallery div.img-container > div div.mask {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  width: calc(100% - 0.8rem);
+  height: calc(100% - 0.8rem);
+  border-radius: 2rem;
+  background-color: rgba(var(--project-clr-dark-rgb), 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.6s var(--project-animation-bezier);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.gallery div.img-container > div:hover div.mask {
+  opacity: 1;
+  visibility: visible;
+}
+
+div.gallery div.img-container > div div.mask button.circle-filled {
+  opacity: 0;
+  transform: translate(0, -3rem);
+  transition: 0.6s var(--project-animation-bezier);
+}
+
+div.gallery div.img-container > div:hover div.mask button.circle-filled {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+section#third div.view-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s var(--project-animation-bezier);
+}
+
+section#third div.view-img.opened {
+  opacity: 1;
+  visibility: visible;
+}
+
+section#third div.view-img div.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--project-clr-light-rgb), 0.2);
+  backdrop-filter: blur(5px);
+}
+
+section#third div.view-img div.img-container {
+  position: absolute;
+  inset: 0 0 0 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(0, 20vh);
+  opacity: 0;
+  width: 20vw;
+  height: 20vh;
+  transition: 0.6s var(--project-animation-bezier);
+}
+
+section#third div.view-img.opened div.img-container {
+  transform: translate(0, 0);
+  width: 50vw;
+  height: 50vh;
+  opacity: 1;
+}
+
+section#third div.view-img div.img-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+
+section#third div.view-img div.img-container button.close-button {
+  position: absolute;
+  left: 102%;
+  bottom: 102%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.6s var(--project-animation-bezier);
+}
+
+section#third div.view-img.opened div.img-container button.close-button {
+  opacity: 1;
+  visibility: visible;
+}

@@ -1,0 +1,22 @@
+:root {
+  --project-clr-dark: #383838;
+  --project-clr-light: #f9f9f9;
+  --project-clr-main: #eb8996;
+  --project-clr-secondary: #E8D684;
+  --project-clr-tertiary: #68CB67;
+  --project-clr-medium: #EDEDED;
+  --project-clr-medium-dark: #BABABA;
+
+  --project-clr-dark-rgb: 56, 56, 56;
+  --project-clr-light-rgb: 249, 249, 249;
+  --project-clr-main-rgb: 235, 137, 150;
+  --project-clr-secondary-rgb: 232, 214, 132;
+  --project-clr-tertiary-rgb: 104, 203, 103;
+  --project-clr-medium-rgb: 237, 237, 237;
+  --project-clr-medium-dark-rgb: 186, 186, 186;
+
+  --project-fnt-weight-text: 400;
+  --project-fnt-weight-title: 600;
+
+  --project-animation-bezier: cubic-bezier(0, .51, .53, 1);
+}
